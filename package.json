@@ -1,0 +1,16 @@
+{
+  "name": "atom-3dbraille",
+  "main": "./lib/atom-3dbraille",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationCommands": {
+    "atom-workspace": "atom-3dbraille:toggle"
+  },
+  "repository": "https://github.com/atom/atom-3dbraille",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
