@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "A short description of your package",
   "activationCommands": {
-    "atom-workspace": "atom-3dbraille:toggle"
+    "atom-workspace": "atom-3dbraille:convert"
   },
   "repository": "https://github.com/atom/atom-3dbraille",
   "license": "MIT",

@@ -2,8 +2,8 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle atom-3dbraille'
-      'command': 'atom-3dbraille:toggle'
+      'label': 'Convert atom-3dbraille'
+      'command': 'atom-3dbraille:convert'
     }
   ]
 'menu': [
@@ -13,8 +13,8 @@
       'label': 'atom-3dbraille'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'atom-3dbraille:toggle'
+          'label': 'Convert'
+          'command': 'atom-3dbraille:convert'
         }
       ]
     ]

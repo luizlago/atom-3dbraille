@@ -20,7 +20,7 @@ describe "Atom3dbraille", ->
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'atom-3dbraille:toggle'
+      atom.commands.dispatch workspaceElement, 'atom-3dbraille:convert'
 
       waitsForPromise ->
         activationPromise
@@ -49,7 +49,7 @@ describe "Atom3dbraille", ->
 
       # This is an activation event, triggering it causes the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'atom-3dbraille:toggle'
+      atom.commands.dispatch workspaceElement, 'atom-3dbraille:convert'
 
       waitsForPromise ->
         activationPromise
@@ -58,5 +58,5 @@ describe "Atom3dbraille", ->
         # Now we can test for view visibility
         atom3dbrailleElement = workspaceElement.querySelector('.atom-3dbraille')
         expect(atom3dbrailleElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'atom-3dbraille:toggle'
+        atom.commands.dispatch workspaceElement, 'atom-3dbraille:convert'
         expect(atom3dbrailleElement).not.toBeVisible()

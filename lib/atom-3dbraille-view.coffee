@@ -5,11 +5,12 @@ class Atom3dbrailleView
     @element = document.createElement('div')
     @element.classList.add('atom-3dbraille')
 
-    # Create message element
-    message = document.createElement('div')
-    message.textContent = "The Atom3dbraille package is Alive! It's ALIVE!"
-    message.classList.add('message')
-    @element.appendChild(message)
+    ifrm = document.createElement('iframe')
+    ifrm.src = 'http://v01pe.github.io/Text2Braille3d/'
+    ifrm.style.width = 600 + 'px'
+    ifrm.style.height = 800 + 'px'
+    #ifrm.style.border = 'none'
+    @element.appendChild(ifrm)
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
