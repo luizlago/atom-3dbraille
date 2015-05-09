@@ -1,5 +1,6 @@
 Atom3dbrailleView = require './atom-3dbraille-view'
 {CompositeDisposable} = require 'atom'
+fs = require 'fs'
 
 module.exports = Atom3dbraille =
   atom3dbrailleView: null
@@ -8,11 +9,10 @@ module.exports = Atom3dbraille =
 
   activate: (state) ->
     @atom3dbrailleView = new Atom3dbrailleView(state.atom3dbrailleViewState)
-    @modalPanel = atom.workspace.addModalPanel(item: @atom3dbrailleView.getElement(), visible: false)
 
     # Events subscribed to in atom'sHello, World!Hello, World! system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
-
+    @modalPanel = atom.workspace.addModalPanel(item: @atom3dbrailleView.getElement(), visible: false)
     # Register command that toggles this view
     @subscriptions.add atom.commands.add 'atom-workspace', 'atom-3dbraille:convert': => @convert()
 
@@ -26,7 +26,7 @@ module.exports = Atom3dbraille =
 
   convert: ->
     if @modalPanel.isVisible()
-      @modalPanel.hide()
+      @modalPanel.destroy()
     else
-      # show modal
+      @modalPanel = atom.workspace.addModalPanel(item: @atom3dbrailleView.getElement(), visible: false)
       @modalPanel.show()
