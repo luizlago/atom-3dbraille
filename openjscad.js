@@ -800,7 +800,7 @@ OpenJsCad.Processor.prototype = {
     this.statusbuttons.appendChild(this.downloadOutputFileLink);
     this.parametersdiv = document.createElement("div");
     this.parametersdiv.className = "parametersdiv";
-    this.parameterdiv.style.display = "none";
+    this.parametersdiv.style.display = "none";
     var headerdiv = document.createElement("div");
     headerdiv.innerText = "Parameters:";
     headerdiv.className = "header";
