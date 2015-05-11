@@ -10,7 +10,7 @@ class Atom3dbrailleView
     ifrm = document.createElement('iframe')
     ifrm.src = 'http://luizlago.github.io/atom-3dbraille/?text=' + txt
     ifrm.style.width = 100 + '%'
-    ifrm.style.height = 665 + 'px'
+    ifrm.style.height = 710 + 'px'
     ifrm.style.border = 'none'
     ifrm.scrolling = 'no'
     @element.appendChild(ifrm)
